@@ -1,4 +1,4 @@
-const { displayWordSoFar, isGameWon, isGameLost } = require("./gamelogic");
+const { displayWordSoFar, isGameWon, turnsTillLost, isGameLost } = require("./gamelogic");
 
 test("displayWordSoFar should display an underscore followed by a space for each letter to guess", () => {
   // ARRANGE
@@ -48,7 +48,19 @@ test("isGameWon should return true when all letters have been guessed", () => {
   expect(gameWon).toBe(true);
 });
 
-test("isGameLost should return true if you've guessed 7 wrong letters or more", () => {
+test("turnsTillLost should return 0 or less if you've guessed 7 wrong letters or more", () => {
+  // ARRANGE
+  const word = "javascript";
+  const guesses = ["q", "w", "e", "y", "u", "o", "d"];
+
+  // ACT
+  const gameLost = turnsTillLost(word, guesses);
+
+  // ASSERT
+  expect(gameLost).toBe(0);
+});
+
+test("isGameLost should return true if turnsTillLost returns 0 or less", () => {
   // ARRANGE
   const word = "javascript";
   const guesses = ["q", "w", "e", "y", "u", "o", "d"];
@@ -58,16 +70,4 @@ test("isGameLost should return true if you've guessed 7 wrong letters or more", 
 
   // ASSERT
   expect(gameLost).toBe(true);
-});
-
-test("isGameLost should return false if you've guessed less than 7 wrong letters", () => {
-  // ARRANGE
-  const word = "javascript";
-  const guesses = ["q", "w", "e", "a", "t"];
-
-  // ACT
-  const gameLost = isGameLost(word, guesses);
-
-  // ASSERT
-  expect(gameLost).toBe(false);
 });

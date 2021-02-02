@@ -18,7 +18,7 @@ $npm install
 
 ```bash
 $npm run test # run jest once
-$npm run test:watch # run jest in watch mdoe
+$npm run test:watch # run jest in watch mode
 $npm run start # start the game
 ```
 
@@ -32,32 +32,32 @@ Je kan het programma stoppen door:
 
 ## Doelen
 
-- [ ] Installeer de repo en probeer de scripts
-- [ ] Probeer het programma uit, wat doet het tot nu toe?
-- [ ] Lees de code
-- [ ] Implementeer de game logica (laat de tests je helpen: `npm run test:watch`)
-- [ ] Is de game logica geimplementeerd? Gebruik de functies dan in index.js
-  - [ ] Zorg dat mensen letters kunnen raden
-  - [ ] Hou bij in de guesses array welke letters mensen geraden hebben
-  - [ ] Laat zien welke letters al geraden zijn met (displayWordSoFar)
-  - [ ] Heeft iemand alle letters geraden? log dan dat ze gewonnen hebben
-  - [ ] Heeft iemand meer 6 letters fout geraden? log dan hebben ze verloren
-  - [ ] Stop het programma met `return` wanneer iemand gewonnen of verloren heeft
-  - [ ] Heeft iemand nog niet gewonnen of verloren? Dan gaat het spel verder
+- [x] Installeer de repo en probeer de scripts
+- [x] Probeer het programma uit, wat doet het tot nu toe?
+- [x] Lees de code
+- [x] Implementeer de game logica (laat de tests je helpen: `npm run test:watch`)
+- [x] Is de game logica geimplementeerd? Gebruik de functies dan in index.js
+  - [x] Zorg dat mensen letters kunnen raden
+  - [x] Hou bij in de guesses array welke letters mensen geraden hebben
+  - [x] Laat zien welke letters al geraden zijn met (displayWordSoFar)
+  - [x] Heeft iemand alle letters geraden? log dan dat ze gewonnen hebben
+  - [x] Heeft iemand meer 6 letters fout geraden? log dan hebben ze verloren
+  - [x] Stop het programma met `return` wanneer iemand gewonnen of verloren heeft
+  - [x] Heeft iemand nog niet gewonnen of verloren? Dan gaat het spel verder
 
 ## BONUS DOELEN (kies zelf uit wat je het leukst vindt!)
 
-- [ ] Check of de gebruiker meer dan een letter tegelijk kiest
+- [x] Check of de gebruiker meer dan een letter tegelijk kiest
   - `a` mag wel
   - `ae` mag niet
-- [ ] Geef een foutmelding wanneer iemand meer dan een letter kiest
+- [x] Geef een foutmelding wanneer iemand meer dan een letter kiest
       OF
 - [ ] Maak het onmogelijk om meer dan een letter tegelijk in te voeren met
-- [ ] Zorg ervoor dat gekke gebruikers het spel niet verliezen door hoofdletters te gebruiken
+- [x] Zorg ervoor dat gekke gebruikers het spel niet verliezen door hoofdletters te gebruiken
   - `A` gekozen? wordt: `a`
   - Is het woord `JavaScript`? wordt: `javascript`
-- [ ] Hou bij hoeveel fouten (letters die niet in woord zitten) iemand al heeft gemaakt
-- [ ] Teken voor elke extra fout een stukje galg:
+- [x] Hou bij hoeveel fouten (letters die niet in woord zitten) iemand al heeft gemaakt
+- [x] Teken voor elke extra fout een stukje galg:
 
 1 fout:
 
