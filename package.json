@@ -11,6 +11,7 @@
   "author": "Rein Op 't Land",
   "license": "SEE LICENSE.MD",
   "dependencies": {
+    "axios": "^0.21.1",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {

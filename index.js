@@ -1,4 +1,5 @@
 
+const { default: axios } = require("axios");
 const { question } = require("readline-sync");
 const { displayWordSoFar, isGameWon, turnsTillLost, drawGallows, isGameLost } = require("./gamelogic");
 
@@ -63,5 +64,9 @@ __________
 `);
 
 
-game("pandabeertje", []);
-
+async function randomWordAndStartGame() {
+    const response = await axios.get('https://random-word-api.herokuapp.com/word?number=200');
+    const gameWord = response.data[0];
+    game(gameWord, []);
+}
+randomWordAndStartGame();
